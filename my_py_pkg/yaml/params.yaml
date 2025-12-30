@@ -1,0 +1,5 @@
+/led_panel_node:
+  ros__parameters:
+    led1: 3
+    led2: 4
+    led3: 5
