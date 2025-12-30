@@ -28,11 +28,17 @@ ament_target_dependencies(turtlesim_controller rclcpp geometry_msgs turtlesim st
 add_executable(spawner_node src/spawner_node.cpp)
 ament_target_dependencies(spawner_node rclcpp geometry_msgs turtlesim std_msgs)
 
-rosidl_target_interfaces(spawner_node
+rosidl_get_typesupport_target(cpp_typesupport_target_spawner_node
   ${PROJECT_NAME} "rosidl_typesupport_cpp")
 
-  rosidl_target_interfaces(turtlesim_controller
+target_link_libraries(spawner_node
+ "${cpp_typesupport_target_spawner_node}")
+
+rosidl_get_typesupport_target(cpp_typesupport_target_turtlesim_controller
   ${PROJECT_NAME} "rosidl_typesupport_cpp")
+
+target_link_libraries(turtlesim_controller
+ "${cpp_typesupport_target_turtlesim_controller}")
 
 install(TARGETS
   turtlesim_controller
