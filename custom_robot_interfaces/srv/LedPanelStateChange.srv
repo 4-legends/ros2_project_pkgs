@@ -1,0 +1,4 @@
+LedPanelState panel
+---
+bool success
+string message

@@ -1,0 +1,10 @@
+turtlesim_controller:
+  ros__parameters:
+    linear_speed: 2.0
+    angular_speed: 2.0
+    distance_tolerance: 0.1
+
+spawner_node:
+  ros__parameters:
+    spawn_interval_ms: 1000
+    max_turtles: 50

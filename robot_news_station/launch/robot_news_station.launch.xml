@@ -1,0 +1,18 @@
+<launch>
+    <node pkg="robot_news_station" exec ="robot_news_station" name="robot_news_station_giskard" >
+        <param name="robot_name" value="giskard"/>
+    </node>
+    <node pkg="robot_news_station" exec ="robot_news_station" name="robot_news_station_bb8" >
+        <param name="robot_name" value="bb8"/>
+    </node>
+    <node pkg="robot_news_station" exec ="robot_news_station" name="robot_news_station_daneel" >
+        <param name="robot_name" value="daneel"/>
+    </node>
+    <node pkg="robot_news_station" exec ="robot_news_station" name="robot_news_station_jander" >
+        <param name="robot_name" value="jander"/>
+    </node>
+    <node pkg="robot_news_station" exec ="robot_news_station" name="robot_news_station_c3po" >
+        <param name="robot_name" value="c3po"/>
+    </node>
+    <node pkg="robot_news_station" exec ="smartphone" name="smartphone" />
+</launch>

@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="turtlesim" exec="turtlesim_node" name="turtlesim_node"/>
+    <node pkg="turtlebot_catch_em_all" exec="turtlesim_controller" name="turtlesim_controller_node">
+        <param from="$(find-pkg-share turtlebot_catch_em_all)/config/turtlebot_catch_em_all_params.yaml" />
+    </node>
+    <node pkg="turtlebot_catch_em_all" exec="spawner_node" name="spawner_node">
+        <param from="$(find-pkg-share turtlebot_catch_em_all)/config/turtlebot_catch_em_all_params.yaml" />
+    </node>
+</launch>
